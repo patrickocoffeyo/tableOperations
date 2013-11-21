@@ -2,11 +2,11 @@ tableOperations
 =======================
 Easily create tables with select-able rows, and operations that can be performed on the selected rows.
 
-**Use**
+##Use
 To create an operation table, simply call tableOperations on the table:
 <code>$('#myTable').tableOperatons(options);</code>
 
-**Options**
+##Options
 ```javascript
   var options = {
     defaultSelect: 'Select',
