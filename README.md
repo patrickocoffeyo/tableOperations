@@ -7,7 +7,7 @@ To create an operation table, simply call tableOperations on the table:
 <code>$('#myTable').tableOperatons(options);</code>
 
 **Options**
-<code>
+```javascript
   var options = {
     defaultSelect: 'Select',
     selectClass: 'form-control',
@@ -33,6 +33,6 @@ To create an operation table, simply call tableOperations on the table:
       },
     }
   }
-</code>
+```
 
 The operations object defines the operations that will be added to the select list above the table. Upon the submition of the operation form, the selected item's callback parameter will be called with a jQuery object of the selected items passed in as the only parameter.
