@@ -10,9 +10,7 @@
           buttonClass: 'btn btn-default',
           formClass: 'form-inline',
           buttonText: 'Go',
-          operations: {
-            test: { label: 'Test Me', callback: function(selected) { console.log(selected); }  }
-          }
+          operations: {}
         };
 
     options = $.extend({}, defaults, options);
