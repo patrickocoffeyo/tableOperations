@@ -1,0 +1,35 @@
+{
+  "name": "tableOperations",
+  "title": "tableOperations",
+  "description": "Easily create tables with select-able rows, and operations that can be performed on the selected rows.",
+  "keywords": [
+    "jquery",
+    "table",
+    "batch",
+    "operations"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "Patrick Coffey",
+    "url": "http://scriptsquirrel.com"
+  },
+  "maintainers": [
+    {
+      "name": "Patrick Coffey",
+      "url": "http://scriptsquirrel.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/patrickocoffeyo/jquery-table-operations/master/LICENSE"
+    }
+  ],
+  "bugs": "https://github.com/patrickocoffeyo/jquery-table-operations/issues",
+  "homepage": "http://scriptsquirrel.com",
+  "docs": "https://github.com/patrickocoffeyo/jquery-table-operations/blob/master/README.md",
+  "download": "https://github.com/patrickocoffeyo/jquery-table-operations/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
