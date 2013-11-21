@@ -10,14 +10,17 @@
           buttonClass: 'btn btn-default',
           formClass: 'form-inline',
           buttonText: 'Go',
-          operations: {}
+          operations: {
+            test: { label: 'Test Me', callback: function(selected) { console.log(selected); }  }
+          }
         };
 
     options = $.extend({}, defaults, options);
 
     //Add the checkbox tds
     if ($table.find('thead').length <= 0) { $table.prepend('<thead><tr></tr></thead>'); }
-    $table.find('tr').prepend('<td class="batch-select-check"><input type="checkbox"/></td>');
+    $table.find('tbody tr').prepend('<td class="batch-select-check"><input type="checkbox"/></td>');
+    $table.find('thead tr').prepend('<td class="batch-select-check-all"><input type="checkbox"/></td>');
 
     //Add the operations selector box
     $table.before('<form id="batch-select-operation-form" class="'+options.formClass+'" role="form"><div class="form-group"><select class="'+options.selectClass+'"><option>'+options.defaultSelect+'</option></select></div><div class="form-group"><button type="submit" class="'+options.buttonClass+'">'+options.buttonText+'</button></div>');
@@ -26,7 +29,7 @@
     $.each(options.operations, function(index, item) { $select.append('<option value="'+index+'">'+item.label+'</option>'); });
 
     //check all
-    $table.find('thead td.batch-select-check input').on('click', function() {
+    $table.find('.batch-select-check-all input').on('click', function() {
       $table.find('td.batch-select-check input').prop('checked', $(this).prop('checked') );
     });
 
