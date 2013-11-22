@@ -24,7 +24,7 @@
 
     //Add the operations selector box
     $table.before('<form id="batch-select-operation-form" class="'+options.formClass+'" role="form"><div class="form-group"><select class="'+options.selectClass+'"><option>'+options.defaultSelect+'</option></select></div><div class="form-group"><button type="submit" class="'+options.buttonClass+'">'+options.buttonText+'</button></div>');
-    $form = $('form#batch-select-operation-form');
+    $form = $table.prev('form#batch-select-operation-form');
     $select = $form.find('select');
     $.each(options.operations, function(index, item) { $select.append('<option value="'+index+'">'+item.label+'</option>'); });
 
