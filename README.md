@@ -6,6 +6,8 @@ Easily create tables with select-able rows, and operations that can be performed
 To create an operation table, simply call tableOperations on the table:
 <code>$('#myTable').tableOperatons(options);</code>
 
+See demo: http://jsfiddle.net/patrickocoffeyo/trtjL/8/
+
 ##Options
 ```javascript
   var options = {
