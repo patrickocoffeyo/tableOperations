@@ -2,8 +2,8 @@
 
   $.fn.tableOperations = function(options) {
     var $table = $(this),
-        $form = {},
-        $select = {},
+        $form,
+        $select,
         defaults = {
           defaultSelect: 'Select',
           selectClass: 'form-control',
@@ -19,8 +19,14 @@
 
     //Add the checkbox tds
     if ($table.find('thead').length <= 0) { $table.prepend('<thead><tr></tr></thead>'); }
-    $table.find('tbody tr').prepend('<td class="batch-select-check"><input type="checkbox"/></td>');
-    $table.find('thead tr').prepend('<td class="batch-select-check-all"><input type="checkbox"/></td>');
+
+    if ($table.find('tbody tr .batch-select-check').length <= 0) {
+      $table.find('tbody tr').prepend('<td class="batch-select-check"><input type="checkbox"/></td>');
+    }
+
+    if ($table.find('thead tr .batch-select-check-all').length <= 0) {
+      $table.find('thead tr').prepend('<td class="batch-select-check-all"><input type="checkbox"/></td>');
+    }
 
     //Add the operations selector box
     $table.before('<form id="batch-select-operation-form" class="'+options.formClass+'" role="form"><div class="form-group"><select class="'+options.selectClass+'"><option>'+options.defaultSelect+'</option></select></div><div class="form-group"><button type="submit" class="'+options.buttonClass+'">'+options.buttonText+'</button></div>');
